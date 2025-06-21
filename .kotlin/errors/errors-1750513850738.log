@@ -1,0 +1,227 @@
+kotlin version: 2.0.21
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: C:/Users/benny/AndroidStudioProjects/EsanCarreraPc2/app/src/main/java/dev/bcarrera/esancarrerapc2/ConversionActivity.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:65)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:52)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:38)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:246)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipeline.kt:142)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:148)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:103)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:49)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:101)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileNonIncrementally(IncrementalCompilerRunner.kt:301)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:129)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:675)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:92)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1660)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:onCreate visibility:protected modality:OPEN <> ($this:<root>.ConversionActivity, savedInstanceState:android.os.Bundle?) returnType:kotlin.Unit
+  overridden:
+    protected/*protected and package*/ open fun onCreate (p0: @[EnhancedNullability] android.os.Bundle?): kotlin.Unit declared in android.app.Activity
+  $this: VALUE_PARAMETER name:<this> type:<root>.ConversionActivity
+  VALUE_PARAMETER name:savedInstanceState index:0 type:android.os.Bundle?
+  BLOCK_BODY
+    CALL 'protected/*protected and package*/ open fun onCreate (p0: @[EnhancedNullability] android.os.Bundle?): kotlin.Unit declared in android.app.Activity' superQualifier='CLASS IR_EXTERNAL_JAVA_DECLARATION_STUB CLASS name:Activity modality:OPEN visibility:public superTypes:[android.view.ContextThemeWrapper; android.view.LayoutInflater.Factory2; android.view.Window.Callback; android.view.KeyEvent.Callback; android.view.View.OnCreateContextMenuListener; android.content.ComponentCallbacks2]' type=kotlin.Unit origin=null
+      $this: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+      p0: GET_VAR 'savedInstanceState: android.os.Bundle? declared in <root>.ConversionActivity.onCreate' type=android.os.Bundle? origin=null
+    VAR name:linearLayout type:android.widget.LinearLayout [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.LinearLayout origin=null
+        <T>: android.widget.LinearLayout
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.LinearLayout' type=android.widget.LinearLayout origin=null
+          p0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.LinearLayout, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun onCreate$lambda$0 (): kotlin.Unit declared in <root>.ConversionActivity' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.LinearLayout, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+    VAR name:amountEditText type:android.widget.EditText [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.EditText origin=null
+        <T>: android.widget.EditText
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.EditText' type=android.widget.EditText origin=null
+          p0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.EditText, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun onCreate$lambda$1 (): kotlin.Unit declared in <root>.ConversionActivity' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.EditText, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+    VAR name:currencies type:kotlin.Array<kotlin.String> [val]
+      BLOCK type=kotlin.Array<out kotlin.String> origin=null
+        VAR IR_TEMPORARY_VARIABLE name:tmp0 type:kotlin.Array<out kotlin.String> [val]
+          CALL 'public final fun arrayOfNulls <T> (size: kotlin.Int): kotlin.Array<T of kotlin.arrayOfNulls?> declared in kotlin' type=kotlin.Array<out kotlin.String> origin=null
+            <T>: kotlin.String
+            size: CONST Int type=kotlin.Int value=5
+        CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+          $this: GET_VAR 'val tmp0: kotlin.Array<out kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<out kotlin.String> origin=null
+          index: CONST Int type=kotlin.Int value=0
+          value: CONST String type=kotlin.String value="USD"
+        CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+          $this: GET_VAR 'val tmp0: kotlin.Array<out kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<out kotlin.String> origin=null
+          index: CONST Int type=kotlin.Int value=1
+          value: CONST String type=kotlin.String value="EUR"
+        CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+          $this: GET_VAR 'val tmp0: kotlin.Array<out kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<out kotlin.String> origin=null
+          index: CONST Int type=kotlin.Int value=2
+          value: CONST String type=kotlin.String value="PEN"
+        CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+          $this: GET_VAR 'val tmp0: kotlin.Array<out kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<out kotlin.String> origin=null
+          index: CONST Int type=kotlin.Int value=3
+          value: CONST String type=kotlin.String value="GBP"
+        CALL 'public final fun set (index: kotlin.Int, value: T of kotlin.Array): kotlin.Unit [operator] declared in kotlin.Array' type=kotlin.Unit origin=null
+          $this: GET_VAR 'val tmp0: kotlin.Array<out kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<out kotlin.String> origin=null
+          index: CONST Int type=kotlin.Int value=4
+          value: CONST String type=kotlin.String value="JPY"
+        GET_VAR 'val tmp0: kotlin.Array<out kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<out kotlin.String> origin=null
+    VAR name:fromSpinner type:android.widget.Spinner [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.Spinner origin=null
+        <T>: android.widget.Spinner
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.Spinner' type=android.widget.Spinner origin=null
+          p0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.Spinner, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun onCreate$lambda$2 (this$0: <root>.ConversionActivity, $currencies: kotlin.Array<kotlin.String>): kotlin.Unit declared in <root>.ConversionActivity' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.Spinner, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+            this$0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+            $currencies: GET_VAR 'val currencies: kotlin.Array<kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<kotlin.String> origin=null
+    VAR name:toSpinner type:android.widget.Spinner [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.Spinner origin=null
+        <T>: android.widget.Spinner
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.Spinner' type=android.widget.Spinner origin=null
+          p0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.Spinner, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun onCreate$lambda$3 (this$0: <root>.ConversionActivity, $currencies: kotlin.Array<kotlin.String>): kotlin.Unit declared in <root>.ConversionActivity' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.Spinner, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+            this$0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+            $currencies: GET_VAR 'val currencies: kotlin.Array<kotlin.String> [val] declared in <root>.ConversionActivity.onCreate' type=kotlin.Array<kotlin.String> origin=null
+    VAR name:convertButton type:android.widget.Button [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.Button origin=null
+        <T>: android.widget.Button
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.Button' type=android.widget.Button origin=null
+          p0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.Button, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun onCreate$lambda$5 ($amountEditText: android.widget.EditText, $fromSpinner: android.widget.Spinner, $toSpinner: android.widget.Spinner, this$0: <root>.ConversionActivity): kotlin.Unit declared in <root>.ConversionActivity' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.Button, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+            $amountEditText: GET_VAR 'val amountEditText: android.widget.EditText [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.EditText origin=null
+            $fromSpinner: GET_VAR 'val fromSpinner: android.widget.Spinner [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.Spinner origin=null
+            $toSpinner: GET_VAR 'val toSpinner: android.widget.Spinner [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.Spinner origin=null
+            this$0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+    VAR name:resultTextView type:android.widget.TextView [val]
+      CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=android.widget.TextView origin=null
+        <T>: android.widget.TextView
+        $receiver: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[FlexibleNullability] android.content.Context?) declared in android.widget.TextView' type=android.widget.TextView origin=null
+          p0: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+        block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          FUNCTION_REFERENCE 'private final fun onCreate$lambda$6 (): kotlin.Unit declared in <root>.ConversionActivity' type=@[ExtensionFunctionType] kotlin.Function1<android.widget.TextView, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val linearLayout: android.widget.LinearLayout [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val amountEditText: android.widget.EditText [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.EditText origin=null
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val linearLayout: android.widget.LinearLayout [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val fromSpinner: android.widget.Spinner [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.Spinner origin=null
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val linearLayout: android.widget.LinearLayout [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val toSpinner: android.widget.Spinner [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.Spinner origin=null
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val linearLayout: android.widget.LinearLayout [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val convertButton: android.widget.Button [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.Button origin=null
+    CALL 'public open fun addView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in android.widget.LinearLayout' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val linearLayout: android.widget.LinearLayout [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.LinearLayout origin=null
+      p0: GET_VAR 'val resultTextView: android.widget.TextView [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.TextView origin=null
+    CALL 'public open fun setContentView (p0: @[FlexibleNullability] android.view.View?): kotlin.Unit [fake_override] declared in <root>.ConversionActivity' type=kotlin.Unit origin=null
+      $this: GET_VAR '<this>: <root>.ConversionActivity declared in <root>.ConversionActivity.onCreate' type=<root>.ConversionActivity origin=null
+      p0: GET_VAR 'val linearLayout: android.widget.LinearLayout [val] declared in <root>.ConversionActivity.onCreate' type=android.widget.LinearLayout origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:40)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:406)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:423)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:168)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:62)
+	... 43 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:onCreate$lambda$0 visibility:private modality:FINAL <> ($receiver:android.widget.LinearLayout) returnType:kotlin.Unit
+  $receiver: VALUE_PARAMETER name:$this$apply type:android.widget.LinearLayout
+  BLOCK_BODY
+    VAR name:$i$a$-apply-ConversionActivity$onCreate$linearLayout$1 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    CALL 'public open fun setOrientation (p0: kotlin.Int): kotlin.Unit declared in android.widget.LinearLayout' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$apply: android.widget.LinearLayout declared in <root>.ConversionActivity.onCreate$lambda$0' type=android.widget.LinearLayout origin=null
+      p0: CONST Int type=kotlin.Int value=1
+    CALL 'public open fun setGravity (p0: kotlin.Int): kotlin.Unit declared in android.widget.LinearLayout' type=kotlin.Unit origin=EQ
+      $this: GET_VAR '$this$apply: android.widget.LinearLayout declared in <root>.ConversionActivity.onCreate$lambda$0' type=android.widget.LinearLayout origin=null
+      p0: CONST Int type=kotlin.Int value=17
+    SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:padding type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+      value: CONST Int type=kotlin.Int value=16
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:790)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.declarations.IrVariable.accept(IrVariable.kt:36)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 53 more
+Caused by: java.lang.AssertionError: access of const val: SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:padding type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+  value: CONST Int type=kotlin.Int value=16
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:861)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitSetField(IrElementVisitor.kt:206)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:908)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrSetField.accept(IrSetField.kt:21)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 70 more
+
+

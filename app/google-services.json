@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "551112301184",
+    "project_id": "esancarrerapc2",
+    "storage_bucket": "esancarrerapc2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551112301184:android:9d470c36ff5ae150346465",
+        "android_client_info": {
+          "package_name": "dev.bcarrera.esancarrerapc2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-fO0wK1Pm9fTYkwGK4xZhrthwFcv2ZrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
